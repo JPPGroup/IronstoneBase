@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">  
   <PropertyGroup>        
+    <TargetFramework>net472</TargetFramework>
+	<Platforms>x64</Platforms>
     <Configurations>Debug 2021;Release 2021;DebugLocal 2021;ReleaseLocal 2021</Configurations>    
   </PropertyGroup>  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
