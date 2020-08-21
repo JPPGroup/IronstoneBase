@@ -10,4 +10,12 @@
       <Version>0.1.1</Version>      
     </PackageReference>
   </ItemGroup>  
+  <ItemGroup Condition="$(Configuration.Contains('2020'))">
+    <PackageReference Include="Jpp.Ironstone.BaseApi.2019">
+      <Version>0.1.1</Version>      
+    </PackageReference>
+    <PackageReference Include="Jpp.Ironstone.C3dApi.2019">
+      <Version>0.1.1</Version>      
+    </PackageReference>
+  </ItemGroup>  
 </Project>
