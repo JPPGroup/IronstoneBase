@@ -3,19 +3,19 @@
   <Import Project="CommonBaseProject.csproj" />
   
   <ItemGroup Condition="$(Configuration.Contains('2021'))">
-    <PackageReference Include="Jpp.Ironstone.BaseApi.2019">
-      <Version>0.1.1</Version>      
+    <PackageReference Include="Jpp.Ironstone.BaseApi.2021">
+      <Version>0.2.0</Version>      
     </PackageReference>
     <PackageReference Include="Jpp.Ironstone.C3dApi.2019">
-      <Version>0.1.1</Version>      
+      <Version>0.2.0</Version>      
     </PackageReference>
   </ItemGroup>  
   <ItemGroup Condition="$(Configuration.Contains('2020'))">
-    <PackageReference Include="Jpp.Ironstone.BaseApi.2019">
-      <Version>0.1.1</Version>      
+    <PackageReference Include="Jpp.Ironstone.BaseApi.2020">
+      <Version>0.2.0</Version>      
     </PackageReference>
-    <PackageReference Include="Jpp.Ironstone.C3dApi.2019">
-      <Version>0.1.1</Version>      
+    <PackageReference Include="Jpp.Ironstone.C3dApi.2020">
+      <Version>0.2.0</Version>      
     </PackageReference>
   </ItemGroup>  
 </Project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>  
+  <Import Project="IronstoneBaseProject.csproj" />
+  
+  <ItemGroup Condition="$(Configuration.Contains('2021'))">
+    <PackageReference Include="Jpp.Ironstone.UiApi.2021">
+      <Version>0.2.0</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>  
+  <ItemGroup Condition="$(Configuration.Contains('2020'))">
+    <PackageReference Include="Jpp.Ironstone.UiApi.2020">
+      <Version>0.2.0</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>  
+</Project>
