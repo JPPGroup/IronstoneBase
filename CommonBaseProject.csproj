@@ -3,7 +3,7 @@
   <PropertyGroup>        
     <TargetFramework>net472</TargetFramework>
 	<Platforms>x64</Platforms>
-    <Configurations>Debug 2021;Release 2021;DebugLocal 2021;ReleaseLocal 2021;Debug 2020;Release 2020;DebugLocal 2020;ReleaseLocal 2020</Configurations>    
+    <Configurations>Debug 2021;Release 2021;DebugLocal 2021;ReleaseLocal 2021;Debug 2020;Release 2020;DebugLocal 2020;ReleaseLocal 2020;Debug 2019;Release 2019;DebugLocal 2019;ReleaseLocal 2019</Configurations>    
   </PropertyGroup>  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DebugType>full</DebugType>
@@ -16,6 +16,12 @@
   
   <PropertyGroup Condition="$(Configuration.Contains('2021'))">
     <AcVersion>2021</AcVersion>    
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains('2020'))">
+    <AcVersion>2020</AcVersion>    
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains('2019'))">
+    <AcVersion>2019</AcVersion>    
   </PropertyGroup>
 
   <PropertyGroup>
