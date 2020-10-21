@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>  
+  <Import Project="IronstoneBaseProject.csproj" />
+  
+  <ItemGroup Condition=" $(Configuration.Contains('Local')) == false ">
+    <PackageReference Include="Jpp.Ironstone.Core">
+      <Version>0.4.0-devb</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition=" $(Configuration.Contains('Local')) ">
+    <ProjectReference Include="..\..\IronstoneCore\IronstoneCore\IronstoneCore.csproj" />
+  </ItemGroup>
+</Project>
