@@ -10,4 +10,12 @@
   <ItemGroup Condition=" $(Configuration.Contains('Local')) ">
     <ProjectReference Include="..\..\IronstoneCore\IronstoneCore\IronstoneCore.csproj" />
   </ItemGroup>
+    <ItemGroup Condition=" $(Configuration.Contains('Local')) == false ">
+    <PackageReference Include="Jpp.Ironstone.CoreUI">
+      <Version>0.6.0-alpha.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition=" $(Configuration.Contains('Local')) ">
+    <ProjectReference Include="..\..\IronstoneCore\IronstoneCoreUI\IronstoneCoreUI.csproj" />
+  </ItemGroup>
 </Project>
