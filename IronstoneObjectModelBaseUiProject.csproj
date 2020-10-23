@@ -4,7 +4,7 @@
   
   <ItemGroup Condition=" $(Configuration.Contains('Local')) == false ">
     <PackageReference Include="Jpp.Ironstone.Core">
-      <Version>0.4.0-devb</Version>
+      <Version>0.6.0-alpha.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup Condition=" $(Configuration.Contains('Local')) ">
