@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project>  
+<Project Sdk="Microsoft.NET.Sdk">  
   <Import Project="CommonBaseProject.csproj" />  
   <ItemGroup Condition="$(Configuration.Contains('2021'))">
     <PackageReference Include="Jpp.Ironstone.BaseApi.2021">
