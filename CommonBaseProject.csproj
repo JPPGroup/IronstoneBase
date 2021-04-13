@@ -33,7 +33,9 @@
   
   <ItemGroup>
     <PackageReference Include="AspectInjector">
-      <Version>2.4.0</Version>
+      <Version>2.5.1-pre1</Version>
+    </PackageReference>
+	<PackageReference Include="Jpp.Common.Tooling.Signing" Version="0.4.8" />
     </PackageReference>	
   </ItemGroup>
   
