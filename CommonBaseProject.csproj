@@ -28,15 +28,13 @@
     <DefineConstants Condition="$(Configuration.Contains('Debug'))">TRACE;DEBUG;AC$(AcVersion)</DefineConstants>
     <DefineConstants Condition="$(Configuration.Contains('Release'))">AC$(AcVersion)</DefineConstants>
     <PreprocessorDefinitions>$(DefineConstants)</PreprocessorDefinitions>
-  </PropertyGroup>
-  
+  </PropertyGroup> 
   
   <ItemGroup>
     <PackageReference Include="AspectInjector">
       <Version>2.5.1-pre1</Version>
     </PackageReference>
-	<PackageReference Include="Jpp.Common.Tooling.Signing" Version="0.4.8" />
-    </PackageReference>	
+	<PackageReference Include="Jpp.Common.Tooling.Signing" Version="0.4.8" />    
   </ItemGroup>
   
   <ItemGroup Condition=" $(Configuration.Contains('Local')) == false">
