@@ -3,7 +3,10 @@
   <PropertyGroup>        
     <TargetFramework>net472</TargetFramework>
 	<Platforms>x64</Platforms>
-    <Configurations>Debug 2022;Release 2022;DebugLocal 2022;ReleaseLocal 2022;Debug 2021;Release 2021;DebugLocal 2021;ReleaseLocal 2021;Debug 2020;Release 2020;DebugLocal 2020;ReleaseLocal 2020;Debug 2019;Release 2019;DebugLocal 2019;ReleaseLocal 2019</Configurations>    
+    <Configurations>Debug 2022;Release 2022;DebugLocal 2022;ReleaseLocal 2022;Debug 2021;Release 2021;DebugLocal 2021;ReleaseLocal 2021;Debug 2020;Release 2020;DebugLocal 2020;ReleaseLocal 2020;Debug 2019;Release 2019;DebugLocal 2019;ReleaseLocal 2019</Configurations>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>    
+	<IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DebugType>full</DebugType>
@@ -13,6 +16,13 @@
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>  
+  
+  <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
   
   <PropertyGroup Condition="$(Configuration.Contains('2022'))">
     <AcVersion>2022</AcVersion>    
@@ -37,6 +47,7 @@
     <PackageReference Include="AspectInjector">
       <Version>2.5.1-pre1</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
 	<PackageReference Include="Jpp.Common.Tooling.Signing" Version="0.4.8" />    
 	<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
 	<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
