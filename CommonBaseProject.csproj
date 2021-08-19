@@ -12,15 +12,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLocal|x64'">
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-  </PropertyGroup>  
-  
-  <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  </PropertyGroup>
-  
+  </PropertyGroup>   
+
   <PropertyGroup Condition="$(Configuration.Contains('2022'))">
     <AcVersion>2022</AcVersion>    
   </PropertyGroup>
