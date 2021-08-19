@@ -2,6 +2,12 @@
 <Project>  
   <Import Project="CommonBaseProject.csproj" />
   
+  <PropertyGroup>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>    
+	<IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+  
   <ItemGroup Condition="$(Configuration.Contains('2022'))">
     <PackageReference Include="Jpp.Ironstone.BaseApi.2022">
       <Version>1.0.0</Version>
@@ -50,5 +56,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+	<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+	<PackageReference Include="Jpp.Common.Tooling.Signing" Version="0.4.8" />   
   </ItemGroup>
 </Project>
