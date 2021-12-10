@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">  
-  <Import Project="IronstoneCoreBaseProject.csproj" />
+  <Import Project="IronstoneBaseProject.csproj" />
   
   <ItemGroup Condition="$(Configuration.Contains('2022'))">
     <PackageReference Include="Jpp.Ironstone.UiApi.2022">
