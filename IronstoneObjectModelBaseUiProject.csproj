@@ -52,4 +52,9 @@
   <ItemGroup Condition=" $(Configuration.Contains('Local')) ">
     <ProjectReference Include="..\..\IronstoneCore\IronstoneCore\IronstoneCore.csproj" />
   </ItemGroup>
+  <ItemGroup>
+	<PackageReference Include="CommunityToolkit.Mvvm">
+      <Version>7.1.2</Version>      
+    </PackageReference>
+	</ItemGroup>
 </Project>
