@@ -25,6 +25,11 @@
       <Version>0.6.0-alpha.4</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup Condition=" $(Configuration.Contains('Local')) == false AND $(Configuration.Contains('2023'))">
+    <PackageReference Include="Jpp.Ironstone.Core.UI.2023">
+      <Version>0.6.0-alpha.4</Version>
+    </PackageReference>
+  </ItemGroup>
   <ItemGroup Condition=" $(Configuration.Contains('Local')) ">
     <ProjectReference Include="..\..\IronstoneCore\IronstoneCoreUI\IronstoneCoreUI.csproj" />
   </ItemGroup>
@@ -46,6 +51,11 @@
   </ItemGroup>  
   <ItemGroup Condition=" $(Configuration.Contains('Local')) == false AND $(Configuration.Contains('2022'))">
     <PackageReference Include="Jpp.Ironstone.Core.2022">
+      <Version>0.6.0-alpha.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition=" $(Configuration.Contains('Local')) == false AND $(Configuration.Contains('2023'))">
+    <PackageReference Include="Jpp.Ironstone.Core.2023">
       <Version>0.6.0-alpha.4</Version>
     </PackageReference>
   </ItemGroup>

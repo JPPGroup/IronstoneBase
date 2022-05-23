@@ -22,6 +22,11 @@
       <Version>0.6.0-alpha.4</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup Condition=" $(Configuration.Contains('Local')) == false AND $(Configuration.Contains('2023'))">
+    <PackageReference Include="Jpp.Ironstone.Core.2023">
+      <Version>0.6.0-alpha.4</Version>
+    </PackageReference>
+  </ItemGroup>
   <ItemGroup Condition=" $(Configuration.Contains('Local')) ">
     <ProjectReference Include="..\..\IronstoneCore\IronstoneCore\IronstoneCore.csproj" />
   </ItemGroup>

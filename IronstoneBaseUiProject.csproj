@@ -2,6 +2,12 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">  
   <Import Project="IronstoneBaseProject.csproj" />
   
+  <ItemGroup Condition="$(Configuration.Contains('2023'))">
+    <PackageReference Include="Jpp.Ironstone.UiApi.2023">
+      <Version>1.0.0</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>  
   <ItemGroup Condition="$(Configuration.Contains('2022'))">
     <PackageReference Include="Jpp.Ironstone.UiApi.2022">
       <Version>1.0.0</Version>
