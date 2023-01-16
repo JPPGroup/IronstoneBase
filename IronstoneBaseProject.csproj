@@ -10,7 +10,7 @@
   
   <ItemGroup Condition="$(Configuration.Contains('2023'))">
     <PackageReference Include="Jpp.Ironstone.BaseApi.2023">
-      <Version>1.0.0</Version>
+      <Version>1.1.0</Version>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="Jpp.Ironstone.C3dApi.2023">
