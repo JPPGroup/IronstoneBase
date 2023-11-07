@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
 	<PackageReference Include="CommunityToolkit.Mvvm">
-      <Version>7.1.2</Version>      
+      <Version>8.2.2</Version>      
     </PackageReference>
 	</ItemGroup>
 </Project>

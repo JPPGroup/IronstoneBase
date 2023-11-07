@@ -3,7 +3,7 @@
   <PropertyGroup>        
     <TargetFramework>net472</TargetFramework>
 	<Platforms>x64</Platforms>
-    <Configurations>Debug 2023;Release 2023;DebugLocal 2023;ReleaseLocal 2023;Debug 2022;Release 2022;DebugLocal 2022;ReleaseLocal 2022;Debug 2021;Release 2021;DebugLocal 2021;ReleaseLocal 2021;Debug 2020;Release 2020;DebugLocal 2020;ReleaseLocal 2020;Debug 2019;Release 2019;DebugLocal 2019;ReleaseLocal 2019</Configurations>    
+    <Configurations>Debug 2024;Release 2024;DebugLocal 2024;ReleaseLocal 2024;Debug 2023;Release 2023;DebugLocal 2023;ReleaseLocal 2023;Debug 2022;Release 2022;DebugLocal 2022;ReleaseLocal 2022;Debug 2021;Release 2021;DebugLocal 2021;ReleaseLocal 2021;Debug 2020;Release 2020;DebugLocal 2020;ReleaseLocal 2020;Debug 2019;Release 2019;DebugLocal 2019;ReleaseLocal 2019</Configurations>    
   </PropertyGroup>  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DebugType>full</DebugType>
@@ -14,6 +14,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>   
 
+  <PropertyGroup Condition="$(Configuration.Contains('2024'))">
+    <AcVersion>2024</AcVersion>    
+  </PropertyGroup>
   <PropertyGroup Condition="$(Configuration.Contains('2023'))">
     <AcVersion>2023</AcVersion>    
   </PropertyGroup>
@@ -38,12 +41,11 @@
   
   <ItemGroup>
     <PackageReference Include="AspectInjector">
-      <Version>2.7.2</Version>
+      <Version>2.8.2</Version>
     </PackageReference>    	 
-	<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
-	<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
-	<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />	
-	<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />	
+	<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+	<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.4" />	
   </ItemGroup>
   
   <ItemGroup Condition=" $(Configuration.Contains('Local')) == false">
